@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+  
+}
+body{
+    background-color: black;
+    background-image: url("assets/back.png");
+}
+.container { 
+ /* height: 200px;*/
+  position: relative;
+  float: left;
+  width: 45%;
+  padding: 10px;
+  height: 300px;
+  margin: 2.5%;
+  /*border: 3px solid green; */
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, 10%);
+}
+.centermain {
+  margin: 0;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, 10%);
+}
+.column {
+float: left;
+  width: 45%;
+  padding: 10px;
+  height: 300px;
+  margin: 2.5%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#netflixlogin{
+    text-align: center;
+    height: 50px;
+    width: 300px;
+    background-color: rgb(53, 53, 53);
+    border: black;
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+}
+#netflixlogin:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 0, 0);
+}
+#spotifylogin{
+    text-align: center;
+    height: 50px;
+    width: 300px;
+    background-color: rgb(53, 53, 53);
+    border: black;
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+}
+#spotifylogin:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 95, 21);
+}
+#loginbtn{
+    text-align: center;
+    height:50px;
+    width: 300px;
+    background-color : blue;
+    border: black;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+}
+#loginbtn:hover{
+    background-color: black;
+}
+</style>
+</head>
+<body>
+<div><h1 style="text-align: center; color: rgb(255, 230, 0);">Hola!! Amigos..!</h1></div>
+
+
+<div class="row">
+  <div style="background-color : #ff0000" class="container">
+    <h2 style="text-align: center; font-size: 50px;">NETFLIX</h2>
+        <div class="center">
+            <a href="signupnetflix.html"><button type="submit" name="submit" id="netflixlogin">SignUp with Netflix</button></a>
+        </div>
+  </div>
+  <div style="background-color : #00ff73" class="container">
+    <h2 style="text-align: center; font-size: 50px;">SPOTIFY</h2>
+        <div class="center">
+           <a href="signupspotify.html"> <button type="submit" name="submit" id="spotifylogin">SignUp with Spotify</button></a>
+        </div>
+  </div>
+</div>
+<div class="centermain"> <a href="loginpage.html"><button type="submit" name="submit" id="loginbtn">LOGIN</button></a></div>
+</body>
+</html>

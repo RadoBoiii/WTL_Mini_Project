@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LOGIN</title>
+    <link rel="stylesheet" type="text/css" href="logincss.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js">
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
+</head>
+</head>
+
+<body style="background-color: black;">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <div class="container-fluid">
+        <div class="row no-gutter">
+            <div class="d-none d-md-flex col-md-6 col-lg-0 bg-image" style="background-image: url(assets/img6.jpg)"></div>
+            <div class="col-md-8 col-lg-6 align-items-center">
+                <div class="login d-flex align-items-center py-5">
+                    <div class="container align-items-center">
+                        <div class="row align-items-center">
+                            <div class="col-md-9 col-lg-8 mx-auto">
+                                <h3 class="login-heading mb-4 align-items-center" id ="HeadText" style="color: rgb(255, 255, 255);">Welcome</h3>
+                                <form action="login.php" method="POST">
+                                    <div class="form-label-group">
+                                        <input type="email" id="inputEmail" class="form-control" name="emailid"
+                                            placeholder="Email address" required autofocus>
+                                        <label for="inputEmail">Email address</label>
+                                    </div>
+
+                                    <div class="form-label-group">
+                                        <input type="password" id="inputPassword" class="form-control" name="password"
+                                            placeholder="Password" required>
+                                        <label for="inputPassword">Password</label>
+                                    </div>
+                                    
+                                    <input type="radio" id="netflixradio" name="options" value="netflix" onclick="netflixpressed()" required>
+                                    <label for="netflixradio" style="color: red;">Netflix</label>
+                                    <br>
+                                    <input type="radio" id="spotifyradio" name="options" value="Spotify" onclick="spotifypressed()" required>
+                                    <label for="spotifyradio" style="color:rgb(47, 255, 64)">Spotify</label>
+                            
+                                    <button
+                                        class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
+                                        type="submit" name="submit" style="background-color: rgb(53, 53, 53); border: black; color: rgb(255, 255, 255);" id="login">LOGIN</button>
+                                    <p style="color: cornsilk; text-align: center;">Don't have an Account? <a href="intropage.html" style="color: green;"> Sign Up Now!</a></p>
+                                   
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<script>
+function netflixpressed() {
+    document.getElementById("login").style.backgroundColor = "red";
+    document.getElementById("login").style.color = "black";
+    document.getElementById("HeadText").innerHTML = "Binge Watch !!";
+    document.getElementById("HeadText").style.color = "red";
+}
+function spotifypressed() {
+    document.getElementById("login").style.backgroundColor = "lightgreen";
+    document.getElementById("login").style.color = "black";
+    document.getElementById("HeadText").innerHTML = "Tune Into Music !!";
+    document.getElementById("HeadText").style.color = "lightgreen";
+}
+</script>
+
+</html>

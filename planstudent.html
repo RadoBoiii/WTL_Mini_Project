@@ -1,0 +1,101 @@
+<html>
+<head>
+  <title>Plan</title>
+  <link rel="stylesheet" type="text/css" href="planregularcss.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
+</head>
+<body>
+  <div class="row">
+  <!-- <img id="logoicon" src="assets/netfliximg.png">
+  <img id="logoicon" src="assets/spotifyimg.png"> -->
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <div class="container">
+    <div class="row">
+    <form class="form-signup" action="planstudent.php" method="POST">
+      <div class="col-sm-6 col-md-6 col-lg-6 mx-auto">
+        <div class="card card-signup my-5"  id="container1">
+        
+          <div class="card-body">
+            <h2 class="card-title text-center" style="color:rgb(255, 255, 255);font-weight: 600;">Your Preference</h2>
+              <h5 style="color: red;">Netflix :</h5>
+              <input type="checkbox" id="fiction" name="MGenre" value="fiction" onClick = "myFunction1()" required>
+              <label for="fiction" style="color: rgb(255, 255, 255); font-weight: 500;">Fiction</label>
+              <br>
+              <input type="checkbox" id="comedy" name="MGenre" value="comedy" onClick = "myFunction1()" required>
+              <label for="comedy" style="color: rgb(255, 255, 255); font-weight: 500;">Comedies</label>
+              <br>
+              <input type="checkbox" id="anime" name="MGenre" value="anime" onClick = "myFunction1()" required>
+              <label for="anime" style="color: rgb(255, 255, 255); font-weight: 500;">Anime</label>
+              <br>
+              <input type="checkbox" id="romance" name="MGenre" value="romance" onClick = "myFunction1()" required>
+              <label for="romance" style="color: rgb(255, 255, 255); font-weight: 500;">Romance</label>
+              <br>
+              <h5 style="color: rgb(0, 187, 0);">Spotify :</h5>
+              <input type="checkbox" id="calm" name="SGenre" value="calm" onClick = "myFunction1()" required>
+              <label for="calm" style="color: rgb(255, 255, 255); font-weight: 500;">Relaxation</label>
+              <br>
+              <input type="checkbox" id="power" name="SGenre" value="power" onClick = "myFunction1()" required>
+              <label for="power" style="color: rgb(255, 255, 255); font-weight: 500;">Energetic</label>
+              <br>
+              <input type="checkbox" id="sad" name="MGenre" value="sad" onClick = "myFunction1()" required>
+              <label for="sad" style="color: rgb(255, 255, 255); font-weight: 500;">Sad :(</label>
+              <br>
+              <input type="checkbox" id="romance" name="MGenre" value="romance" onClick = "myFunction1()" required>
+              <label for="romance" style="color: rgb(255, 255, 255); font-weight: 500;">Romantic</label>
+              <br>
+              <!-- <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" name="submit" style="background-color: rgb(0, 0, 0); border: black;">Next</button>
+            </form> -->
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-6 col-lg-6 mx-auto">
+        <div class="card card-signup my-5"  id="container1">
+            <div class="card-body">
+                <h2 class="card-title text-center" style="color:rgb(255, 255, 255);font-weight: 600;">Plans</h2>
+                  <input type="radio" id="monthly" name="plans" value="monthly" onClick = "myFunction1()" required>
+                  <label for="monthly" style="color: rgb(255, 255, 255); font-weight: 500;">Monthly Plan</label>
+                  <br>
+                  <input type="radio" id="annual" name="plans" value="annual" onClick = "myFunction2()" required>
+                  <label for="annual" style="color: rgb(255, 255, 255); font-weight: 500;">Yearly Plan</label>
+                  <span id="monthlyspan" style="display: none;">$17 per month paid monthly($17/MONTH)</span>
+                  <span id="annualspan" style="display: none;">$180 annually paid annually($15/MONTH)</span>
+                <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" name="submit" style=" margin-top: 10px; background-color: rgb(109, 109, 109); border: black;">Next</button>
+            </div>
+          </div>
+      </div>
+    </form>
+    </div>
+  </div>
+
+  <script>
+    function myFunction1() {
+   
+        var monthly = document.getElementById("monthly").value;
+        var annual = document.getElementById("annual").value;
+        var monthlyspan = document.getElementById("monthlyspan");
+        var annualspan = document.getElementById("annualspan");
+        if(monthly == "monthly"){
+            monthlyspan.style.display = "block";
+            annualspan.style.display = "none";
+        }
+    }
+    function myFunction2() {
+        var monthly = document.getElementById("monthly").value;
+        var annual = document.getElementById("annual").value;
+        var monthlyspan = document.getElementById("monthlyspan");
+        var annualspan = document.getElementById("annualspan");
+      if(annual == "annual"){
+            monthlyspan.style.display = "none";
+            annualspan.style.display = "block";
+        }
+    }
+    </script>
+
+</body>
+</html
